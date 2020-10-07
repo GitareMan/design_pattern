@@ -22,9 +22,8 @@ class Singleton
         return self::$instance;
     }
 
-
-    private function __clone () {}
-    private function __wakeup (){}
+   // private function __clone () {}
+   // private function __wakeup (){}
 
 
 }
