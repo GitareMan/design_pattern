@@ -1,5 +1,3 @@
-
-
 <?php 
 require 'Singleton.php';
 
