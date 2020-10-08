@@ -10,6 +10,6 @@ class ApproveState extends State
 
     public function __toString()
     {
-        return "Approved";
+        return "Approve";
     }
 }

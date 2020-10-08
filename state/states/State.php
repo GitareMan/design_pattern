@@ -1,8 +1,10 @@
 <?php 
+require_once 'states/ReviewState.php';
 
 abstract class State 
 {
     protected $doc;
+    protected $oldState;
 
     public function __construct(Document $doc)
     {

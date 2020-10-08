@@ -1,6 +1,6 @@
 <?php 
 
-class DeniedStat extends State 
+class DeniedState extends State 
 {
     public function __construct(Document $doc)
     {

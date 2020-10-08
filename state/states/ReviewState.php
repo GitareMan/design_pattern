@@ -14,13 +14,13 @@ class ReviewState extends State
     public function approve()
     {
         if($this->doc->getSumma() <= 2000)
-        $this->doc->changeState(new ApproveState($this->doc));
+           $this->doc->changeState(new ApproveState($this->doc));
     }
 
     public function deny()
     {
         if($this->doc->getSumma() > 2000)
-        $this->doc->changeState(new DeniedState($this->doc));
+           $this->doc->changeState(new DeniedState($this->doc));
     }
 
     public function __toString()
@@ -31,8 +31,10 @@ class ReviewState extends State
     public function onEnterState($oldState)
     {
         parent::onEnterState($oldState);
-        if($this->doc->getSumma() > 0)
-        $this->verify();
+        if($this->doc->getSumma() > 2000)
+           $this->deny();
+        else 
+            $this->approve();
     }
 
 }

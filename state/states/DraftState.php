@@ -14,15 +14,13 @@ class DraftState extends State
 
     public function __toString()
     {
-        return "Denied";
+        return "Draft";
     }
 
     public function onEnterState($oldState)
     {
-        if($this->doc->getSumma() > 2000)
-           $this->deny();
-        else 
-            $this->approve();
+        if($this->doc->getSumma() > 0)
+           $this->verify();
     }
 
 
