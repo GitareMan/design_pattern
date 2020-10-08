@@ -29,7 +29,7 @@ class USWeatherAdapter implements WeatherService
 
     public function getFeelsLikeTemperature()
     {
-        return 1.04*$this->getTemperature()-$this->getWind()*0.65-0.9; // Высокая влажность
+        return 1.04*$this->getTemperature() - $this->getWind()*0.65-0.9; // Высокая влажность
     }
 
     public function setPosition(String $city)
@@ -37,10 +37,10 @@ class USWeatherAdapter implements WeatherService
          switch ($city) {
              case 'Вашингтон': 
                  $this->latitude = 38.53;
-                 $this->longtitude = 77.03;
+                 $this->longtitude = 71.03;
                  break;
              case 'Нью-Йорк': 
-                 $this->latitude = 40.43;
+                 $this->latitude = 43.43;
                  $this->longtitude = 73.55;
                  break;
              
